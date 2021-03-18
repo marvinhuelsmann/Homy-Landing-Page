@@ -73,8 +73,10 @@
           <b-form-input
               id="input-1"
               v-model="text"
+              size="lg"
               type="email"
-              placeholder="Enter email"
+              placeholder="Deine Email Adresse"
+              style="text-align: center"
               required
           ></b-form-input>
 
@@ -82,14 +84,20 @@
 
 
         <div v-if="!sendEmail">
-          <b-button type="submit" @click="onSubmit()" size="lg" variant="dark">Abonieren</b-button>
+          <div v-if="error">
+            <p style="color: red">
+              Ein Fehler ist aufgetaucht. Lade die Seite neu und probiere es erneut...
+            </p>
+          </div>
+          <div v-else>
+            <b-button type="submit" @click="onSubmit()" size="lg" variant="dark">Abonieren</b-button>
+          </div>
         </div>
-        <div v-else>
 
+        <div v-if="sendEmail">
           <p style="color: green">
             Du hast den Newsletter erfolgreich aboniert!
           </p>
-
         </div>
 
 
@@ -121,6 +129,7 @@ export default {
     return {
       text: '',
       sendEmail: false,
+      error: false,
       show: false,
       variants: ['primary', 'secondary', 'success', 'warning', 'danger', 'info', 'light', 'dark'],
       headerBgVariant: 'dark',
@@ -134,7 +143,8 @@ export default {
     },
     mounted() {
 
-      if (this.text === '') {
+      if (this.text === '' || !this.text.includes("@")) {
+        this.error = true
         return;
       }
 
@@ -143,7 +153,7 @@ export default {
           if (response.ok) {
             this.sendEmail = true
           } else {
-            alert('Ein Fehler ist aufgetreten, kontaktiere einen Entwickler...')
+            this.error = true
           }
         })
       })
