@@ -82,12 +82,12 @@
 
 
         <div v-if="!sendEmail">
-          <b-button type="submit" @click="onSubmit()" size="lg" variant="dark">Abonieren</b-button>
+          <b-button type="submit" @click="onSubmit()" size="lg" variant="dark">Abonnieren</b-button>
         </div>
         <div v-else>
 
           <p style="color: green">
-            Du hast den Newsletter erfolgreich aboniert!
+            Du hast den Newsletter erfolgreich abonniert!
           </p>
 
         </div>
