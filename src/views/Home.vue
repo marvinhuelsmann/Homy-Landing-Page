@@ -96,8 +96,9 @@
 
         <div v-if="sendEmail">
           <p style="color: green">
-            Du hast den Newsletter erfolgreich aboniert!
+            Du hast den Newsletter erfolgreich abonniert!
           </p>
+
         </div>
 
 
@@ -129,7 +130,6 @@ export default {
     return {
       text: '',
       sendEmail: false,
-      error: false,
       show: false,
       variants: ['primary', 'secondary', 'success', 'warning', 'danger', 'info', 'light', 'dark'],
       headerBgVariant: 'dark',
