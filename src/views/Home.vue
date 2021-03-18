@@ -18,8 +18,8 @@
         wirst du erinnert wenn du deine Aufgaben abgeben musst und mehr.
       </p>
 
-      <a target="_blank"  v-b-modal.modal-1>
-        <b-img class="no-move img" src="../assets/download_button.png"></b-img>
+      <a target="_blank" v-b-modal.modal-1>
+        <b-img class="img" src="../assets/download_button.png"></b-img>
       </a>
 
       <b-modal id="modal-1"
@@ -59,15 +59,53 @@
 
     <br class="no-move"/>
 
-    <div class="" style="alignment: bottom">
+    <div class="container">
+      <h1 class="display-title-strong text-dark">Newsletter</h1>
+      <p class="normal-text-secondary text-dark">
+        Behalte die neusten Informationen und den Entwicklungsstand der App immer im Auge.
+      </p>
 
+      <b-form @submit.prevent>
+        <b-form-group
+            id="input-group-1"
+            label-for="input-1">
+
+          <b-form-input
+              id="input-1"
+              v-model="text"
+              type="email"
+              placeholder="Enter email"
+              required
+          ></b-form-input>
+
+        </b-form-group>
+
+
+        <div v-if="!sendEmail">
+          <b-button type="submit" @click="onSubmit()" size="lg" variant="dark">Abonieren</b-button>
+        </div>
+        <div v-else>
+
+          <p style="color: green">
+            Du hast den Newsletter erfolgreich aboniert!
+          </p>
+
+        </div>
+
+
+      </b-form>
+    </div>
+
+    <br class="no-move"/>
+
+    <div class="" style="alignment: bottom">
 
 
       <p class="smaller-end-text">© {{ new Date().getFullYear() }}
         <a style="color: #6868b3" href="https://marvhuelsmann.de">Marvin Hülsmann</a> -
         <a style="color: #6868b3" target="_blank" href="https://marvhuelsmann.de/data">Privacy Policy</a> -
         Auf <a style="color: #6868b3" target="_blank"
-           href="https://twitter.com/intent/tweet?text=New App: Homy is amazing!">Twitter</a> verbreiten :3
+               href="https://twitter.com/intent/tweet?text=New App: Homy is amazing!">Twitter</a> verbreiten :3
       </p>
     </div>
 
@@ -76,16 +114,40 @@
 </template>
 
 <script>
-// @ is an alias to /src
 
 export default {
   name: 'Home',
   data() {
     return {
+      text: '',
+      sendEmail: false,
       show: false,
       variants: ['primary', 'secondary', 'success', 'warning', 'danger', 'info', 'light', 'dark'],
       headerBgVariant: 'dark',
       headerTextVariant: 'light',
+    }
+  },
+  methods: {
+    onSubmit() {
+      this.mounted()
+
+    },
+    mounted() {
+
+      if (this.text === '') {
+        return;
+      }
+
+      fetch('https://marv.link/addMail?mail=' + this.text).then(response => {
+        response.json().then(() => {
+          if (response.ok) {
+            this.sendEmail = true
+          } else {
+            alert('Ein Fehler ist aufgetreten, kontaktiere einen Entwickler...')
+          }
+        })
+      })
+
     }
   }
 }
