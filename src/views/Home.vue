@@ -106,15 +106,19 @@
     </div>
 
     <br class="no-move"/>
+    <br class="no-move"/>
 
     <div class="" style="alignment: bottom">
 
 
+      <p class="smaller-end-text">
+        Die App auf <a target="_blank" style="color: #6868b3" href="https://github.com/marvinhuelsmann/Homy">GitHub</a> ansehen.
+      </p>
       <p class="smaller-end-text">© {{ new Date().getFullYear() }}
         <a style="color: #6868b3" href="https://marvhuelsmann.de">Marvin Hülsmann</a> -
         <a style="color: #6868b3" target="_blank" href="https://marvhuelsmann.de/data">Privacy Policy</a> -
         Auf <a style="color: #6868b3" target="_blank"
-               href="https://twitter.com/intent/tweet?text=New App: Homy is amazing!">Twitter</a> verbreiten :3
+               href="https://twitter.com/intent/tweet?text=The 'Homy' App in Apple App Store is amazing. Learn more at: https://homy.fun">Twitter</a> verbreiten :3
       </p>
     </div>
 
