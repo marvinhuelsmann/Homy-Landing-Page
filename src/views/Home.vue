@@ -45,7 +45,7 @@
       <br class="no-move"/>
 
 
-      <h1 class="display-title-strong text-white">Homy - In benutzung</h1>
+      <h1 class="display-title-strong text-white">Homy - Sicher und Privat</h1>
       <p class="normal-text-secondary text-white">
         Homy teilt keine Daten in Datenbanken. Sie bleiben einzig und alleine auf deinem Gerät gespeichert.
       </p>

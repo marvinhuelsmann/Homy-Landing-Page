@@ -19,7 +19,8 @@ import {
   faQuestionCircle,
   faGamepad,
   faAddressBook,
-  faRocket
+  faRocket,
+  faLock
 } from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 import './plugins/bootstrap-vue'
@@ -27,7 +28,7 @@ import App from './App.vue'
 import router from './router'
 
 
-library.add(faAngleDoubleDown, faEnvelope, faMapMarked, faSignature, faShare, faCommentAlt, faSave, faPhone, faCheck, faShoppingBag, faDownload, faQuestionCircle, faGamepad, faAddressBook, faAngleDoubleRight, faRocket)
+library.add(faLock, faAngleDoubleDown, faEnvelope, faMapMarked, faSignature, faShare, faCommentAlt, faSave, faPhone, faCheck, faShoppingBag, faDownload, faQuestionCircle, faGamepad, faAddressBook, faAngleDoubleRight, faRocket)
 
 
 Vue.component('fai', FontAwesomeIcon)
