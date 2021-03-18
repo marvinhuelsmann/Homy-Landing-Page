@@ -1,0 +1,341 @@
+.home {
+  background: #bbc3bd;
+}
+
+.green-blass-wait {
+  background-color: #E8FED8;
+  padding-left: 40px;
+  padding-right: 40px
+}
+
+.yellow-blass-wait {
+  background-color: #F7F1C0;
+}
+
+.purple-blass-wait {
+  background-color: #e9bbd8;
+  padding-left: 40px;
+  padding-right: 40px
+}
+
+.orange-blass-wait {
+  background-color: #ffdabd;
+}
+
+.purple-black-wait {
+  background-color: #9c99a2;
+  padding-left: 40px;
+  padding-right: 40px
+}
+
+.rainbow-wait {
+  background: linear-gradient(to bottom right, #020202, #201a35, #07072b, #1e1e34);
+}
+
+.rainbow-border-wait {
+  border-radius: 10px;
+  background: linear-gradient(to bottom right, #1d1d1d, #2b1058, #262645, #262632);
+}
+
+.rainbow-border-wait-other {
+  border-radius: 10px;
+  background: linear-gradient(to bottom right, #000000, #0f3506, #121222, #1a1a1d);
+}
+
+.rainbow-border-wait-other-red {
+  border-radius: 10px;
+  background: linear-gradient(to bottom right, #775252, #402a2a, #401818);
+}
+
+.black-wait {
+  background-color: #000000;
+}
+
+.black-lighter-wait {
+  background-color: #323030;
+}
+
+.red-lighter-wait {
+  background-color: #f39595;
+  border-radius: 30px;
+}
+
+.blue-dark-wait {
+  background-color: #9eb7ff;
+  border-radius: 30px;
+}
+
+.creppy-white-blass-wait {
+  background-color: #2f2f2f;
+}
+
+.gray-blass-wait {
+  background-color: #ececec;
+}
+
+.blue-blass-wait {
+  background-color: #aecbd9;
+}
+
+.gold-wait {
+  background-color: #ffe9e3;
+}
+
+.black-black-wait {
+  background-color: #000000;
+  border-radius: 200px;
+}
+
+
+.green-color {
+  color: #50976a;
+}
+
+.purple-black-color {
+  color: #e1e1ef;
+
+}
+
+.green-dark-color {
+  color: #3c7250;
+}
+
+.orange-color {
+  color: #ff784b;
+}
+
+.red-dark-color {
+  color: #a01313;
+}
+
+.purple-darker-color {
+  color: #92547d;
+}
+
+.purple-lighter-color {
+  color: #792f58;
+}
+
+.orange-dark-color {
+  color: #cb6033;
+}
+
+.orange-darker-color {
+  color: #a04725;
+}
+
+.blue-darker-color {
+  color: #040e36;
+}
+
+.white-color {
+  color: #ffffff;
+}
+
+.text-white-gray-color {
+  color: #57575b;
+}
+
+.img {
+  width: 240px;
+}
+
+.img-small {
+  height: 300px;
+}
+
+.img-big {
+  height: 630px;
+}
+
+.img-inv {
+
+}
+
+.no-move {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+img {
+  pointer-events: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.headers-text {
+  margin-top: 20px;
+  font-size: 80px;
+}
+
+.end-dark-gray-layer {
+  background-color: #262626;
+  height: 70px;
+}
+
+.gray-shadow {
+  filter: drop-shadow(0 0 30px #404040);
+}
+
+.red-shadow {
+  filter: drop-shadow(0 0 50px #2b0000);
+}
+
+.red-light-shadow {
+  filter: drop-shadow(0 0 5px #ff7575);
+}
+
+.blue-shadow {
+  filter: drop-shadow(0 0 50px #01092f);
+}
+
+.yellow-shadow {
+  filter: drop-shadow(0 0 8px #f6ea9f);
+}
+
+.white-shadow {
+  filter: drop-shadow(0 0 5px #d9d1d1);
+}
+
+.card-decks {
+  margin-top: 50px;
+}
+
+.long-text {
+  width: 90%;
+}
+
+@media (max-width: 767.98px) {
+
+  .title-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  html {
+    font-size: .875rem;
+  }
+
+  .gray-layer {
+    width: 90%;
+  }
+
+  .end-dark-gray-layer {
+    height: auto;
+  }
+
+}
+
+@media (max-width: 1616.98px) {
+
+  .img-inv {
+    display: none;
+  }
+}
+
+@media (max-width: 1175.98px) {
+  .img {
+    width: 200px;
+    padding-bottom: 10px;
+  }
+
+  .img-small {
+    height: 220px;
+    padding-bottom: 10px;
+  }
+
+  .img-big {
+    height: 320px;
+  }
+
+  .black-black-wait {
+    border-radius: 100px;
+  }
+}
+
+@media (max-width: 860.98px) {
+
+  .img-big {
+    height: 290px;
+  }
+
+}
+
+@media (max-width: 600.98px) {
+  .headers-text {
+    margin-top: 20px;
+    font-size: 60px;
+  }
+
+  .img-big {
+    height: 235px;
+  }
+
+  .img {
+    width: 170px;
+    padding-bottom: 10px;
+  }
+
+  .img-small {
+    height: 190px;
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 668.98px) {
+  .img-inv-only-handy {
+    display: none;
+  }
+
+  .black-black-wait {
+    border-radius: 60px;
+  }
+
+  .strong {
+    font-size: 2.2rem;
+  }
+
+}
+
+@media (max-width: 412.98px) {
+  .img-big {
+    height: 210px;
+  }
+
+  .strong {
+    font-size: 2.0rem;
+  }
+
+}
+
+@media (max-width: 322.98px) {
+  .img-big {
+    height: 200px;
+  }
+  .strong {
+    font-size: 1.8rem;
+  }
+}
+
+.middle-wave-left {
+  padding-right: 65%;
+}
+
+.middle-wave-right {
+  padding-left: 20%;
+}
+
+.blue-line {
+  background-color: #ebebf1;
+}
+
+.container-small {
+  padding-left: 5%;
+  padding-right: 5%;
+}

@@ -1,0 +1,164 @@
+/*           */
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500|Jost:400,500,600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  background-color: #fff;
+}
+
+h1 {
+  font-family: "DM Sans", sans-serif;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+h5 {
+  font-family: "DM Sans", sans-serif;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+h5 {
+  color: white;
+}
+
+.text-dark {
+  color: #000000;
+}
+
+.no-move {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.body-title-lighter {
+  font-size: 2.2rem;
+  font-weight: lighter;
+}
+
+.display-title-lighter {
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+.display-title-middle {
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+.strong {
+  font-size: 3.2rem;
+}
+
+.display-title-strong {
+  font-size: 4.4rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.smaller-normal-text {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.7rem;
+  color: #2f2f2f;
+}
+
+.smaller-end-text {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.56rem;
+  color: #2f2f2f;
+}
+
+.smallest-end-text {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.35rem;
+  color: #2f2f2f;
+}
+
+.normal-text-title {
+  font-size: 1.8rem;
+  color: #000000;
+}
+
+.footnote-text {
+  font-size: 1.3rem;
+  color: #000000;
+}
+
+.normal-text-secondary {
+  font-size: 1.6rem;
+  color: #000000;
+}
+
+.middle {
+  margin: auto;
+
+  text-align: center;
+  width: 25%;
+}
+
+.group {
+  margin: auto;
+
+  text-align: center;
+  width: 35%;
+}
+
+@media (max-width: 767.98px) {
+  .middle {
+    margin: auto;
+
+    text-align: center;
+    width: 90%;
+  }
+  .group {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    text-align: center;
+    width: 95%;
+  }
+  .display-title-strong {
+    font-size: 3.6rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  .display-title-middle {
+    font-size: 2.32rem;
+  }
+}
+
+@media (max-width: 1200.98px) {
+  .display-title-strong {
+    font-size: 3.8rem;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1000.98px) {
+  .display-title-strong {
+    font-size: 3.6rem;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
