@@ -83,22 +83,33 @@
         </b-form-group>
 
 
-        <div v-if="!sendEmail">
-          <div v-if="error">
-            <p style="color: red">
-              Ein Fehler ist aufgetaucht. Lade die Seite neu und probiere es erneut...
+        <div>
+          <div v-if="!sendEmail">
+            <div v-if="error">
+              <p style="color: red">
+                Ein Fehler ist aufgetaucht. Lade die Seite neu und probiere es erneut...
+              </p>
+            </div>
+            <div v-else-if="waiting" style="text-align: center">
+
+              <br class="no-move"/>
+
+              <b-skeleton animation="throb" width="85%"></b-skeleton>
+              <b-skeleton animation="throb" width="55%"></b-skeleton>
+              <b-skeleton animation="throb" width="70%"></b-skeleton>
+
+            </div>
+            <div v-else>
+              <b-button type="submit" @click="onSubmit()" size="lg" variant="dark">Abonieren</b-button>
+            </div>
+          </div>
+
+
+          <div v-else-if="sendEmail">
+            <p style="color: green">
+              Du hast den Newsletter erfolgreich abonniert!
             </p>
           </div>
-          <div v-else>
-            <b-button type="submit" @click="onSubmit()" size="lg" variant="dark">Abonieren</b-button>
-          </div>
-        </div>
-
-        <div v-if="sendEmail">
-          <p style="color: green">
-            Du hast den Newsletter erfolgreich abonniert!
-          </p>
-
         </div>
 
 
@@ -112,13 +123,15 @@
 
 
       <p class="smaller-end-text">
-        Die App auf <a target="_blank" style="color: #6868b3" href="https://github.com/marvinhuelsmann/Homy">GitHub</a> ansehen.
+        Die App auf <a target="_blank" style="color: #6868b3" href="https://github.com/marvinhuelsmann/Homy">GitHub</a>
+        ansehen.
       </p>
       <p class="smaller-end-text">© {{ new Date().getFullYear() }}
         <a style="color: #6868b3" href="https://marvhuelsmann.de">Marvin Hülsmann</a> -
         <a style="color: #6868b3" target="_blank" href="https://marvhuelsmann.de/data">Privacy Policy</a> -
         Auf <a style="color: #6868b3" target="_blank"
-               href="https://twitter.com/intent/tweet?text=The 'Homy' App in Apple App Store is amazing. Learn more at: https://homy.fun">Twitter</a> verbreiten :3
+               href="https://twitter.com/intent/tweet?text=The 'Homy' App in Apple App Store is amazing. Learn more at: https://homy.fun">Twitter</a>
+        verbreiten :3
       </p>
     </div>
 
@@ -134,7 +147,9 @@ export default {
     return {
       text: '',
       sendEmail: false,
+      error: false,
       show: false,
+      waiting: false,
       variants: ['primary', 'secondary', 'success', 'warning', 'danger', 'info', 'light', 'dark'],
       headerBgVariant: 'dark',
       headerTextVariant: 'light',
@@ -152,6 +167,8 @@ export default {
         return;
       }
 
+      this.waiting = true;
+
       fetch('https://marv.link/addMail?mail=' + this.text).then(response => {
         response.json().then(() => {
           if (response.ok) {
@@ -160,7 +177,7 @@ export default {
             this.error = true
           }
         })
-      })
+      }).finally(() => this.waiting = false)
 
     }
   }
