@@ -15,7 +15,7 @@
       <h1 class="display-title-lighter text-dark">Ab dem <u>30.4.2021</u> im Apple App Store</h1>
       <p class="normal-text-secondary text-white-gray-color container">
         Dein Online Hausaufgaben Planer - Mit Homy ist deine Aufgaben Verwaltung kinderleicht zu bedienen. Außerdem
-        wirst du erinnert wenn du deine Aufgaben abgeben musst und mehr.
+        wirst du erinnert wenn du deine Aufgaben abgeben musst und vieles mehr.
       </p>
 
       <a target="_blank" v-b-modal.modal-1>
