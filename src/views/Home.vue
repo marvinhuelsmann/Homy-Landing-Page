@@ -59,6 +59,24 @@
 
     <br class="no-move"/>
 
+    <div class="orange-blass-wait">
+
+      <br class="no-move"/>
+
+
+      <h1 class="display-title-strong text-white">Transparent und eine einfache Bedienung</h1>
+      <p class="normal-text-secondary text-white ">
+        Wir versuchen den Homy Benutzern eine einfache und strukturierte Benutzeroberfläche zu schaffen.
+      </p>
+
+
+
+      <br class="no-move "/>
+
+    </div>
+
+    <br class="no-move"/>
+
     <div class="container">
       <h1 class="display-title-strong text-dark">Newsletter</h1>
       <p class="normal-text-secondary text-dark">
