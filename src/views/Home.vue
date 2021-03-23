@@ -12,7 +12,7 @@
       <br class="no-move"/>
 
       <h1 class="display-title-strong text-dark">Homy</h1>
-      <h1 class="display-title-lighter text-dark">Ab dem <u>30.4.2021</u> im Apple App Store</h1>
+      <h1 class="display-title-lighter text-dark">Ab dem <u>30.4.2021</u> im Apple App Store. Ab diesem Zeitpunkt kann die App jederzeit veröffentlicht werden.</h1>
       <p class="normal-text-secondary text-white-gray-color container">
         Dein Online Hausaufgaben Planer - Mit Homy ist deine Aufgaben Verwaltung kinderleicht zu bedienen. Außerdem
         wirst du erinnert wenn du deine Aufgaben abgeben musst und vieles mehr.
