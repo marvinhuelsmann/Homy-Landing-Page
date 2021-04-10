@@ -118,7 +118,7 @@
 
             </div>
             <div v-else>
-              <b-button type="submit" @click="onSubmit()" size="lg" variant="dark">Abbonieren</b-button>
+              <b-button type="submit" @click="onSubmit()" size="lg" variant="dark">Abonnieren</b-button>
             </div>
           </div>
 
