@@ -32,7 +32,7 @@
 
           <h1 class="pt-1 display-title-strong text-white">Entwicklungsstand</h1>
           <p class="normal-text-secondary text-white">
-            Die App ist kurz vor der Veröffentlichung, sie benötigt schätzungsweise noch {{mathWorkState}}% für die Fertigstellung der App, sie wurde bereits zu circa {{work.workState}}% entwickelt.
+            Die App ist kurz vor der Veröffentlichung, sie benötigt schätzungsweise noch {{mathWorkState}}% für die Fertigstellung, sie wurde bereits zu circa {{work.workState}}% entwickelt.
           </p>
 
           <b-progress :value="work.workState" :max="100" animated variant="dark"></b-progress>
