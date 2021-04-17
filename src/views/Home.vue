@@ -53,7 +53,6 @@
     </div>
     <br class="no-move"/>
 
-
     <div class="pt-3 pb-3 orange-blass-wait">
 
       <h1 class="display-title-strong text-white">Transparent und eine einfache Bedienung</h1>
