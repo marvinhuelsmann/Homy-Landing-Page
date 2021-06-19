@@ -26,12 +26,11 @@ if (isset($_GET['mail'])) {
     $sql = "INSERT INTO `homy_newsletter` (`ip`, `email`) VALUES ('".mysqli_real_escape_string($db , $_GET['mail'])."', '".mysqli_real_escape_string($db , $ip)."')";
     if (mysqli_query($db, $sql)) {
         echo json_encode(['success' => 'email added']);
-
         return;
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($db);
     }
-}
+} else echo json_encode(['error' => 'missing mail parameter']);
 
 http_response_code(401);
 
