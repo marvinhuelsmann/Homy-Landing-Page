@@ -1,78 +1,60 @@
 <template>
   <div>
     <div class="pt-5 home">
-
       <b-img rounded="circle" src="../assets/logo.png" class="img"></b-img>
-
       <h1 class="pt-lg-5 display-title-strong text-dark">Homy</h1>
       <h1 class="display-title-lighter text-dark">Ab dem <u>XX.XX.2021</u> im Apple App Store.</h1>
       <p class="normal-text-secondary text-white-gray-color container">
         Dein Online Hausaufgaben Planer - Mit Homy ist deine Aufgaben Verwaltung kinderleicht zu bedienen. Außerdem
         wirst du erinnert wenn du deine Aufgaben abgeben musst und vieles mehr.
       </p>
-
       <a target="_blank" v-b-modal.modal-1>
         <b-img class="img" src="../assets/download_button.png"></b-img>
       </a>
-
       <b-modal id="modal-1"
                :header-bg-variant="headerBgVariant"
                :header-text-variant="headerTextVariant" title="Bald verfügbar" ok-only>
         <p class="my-4 text-dark"><strong>Die App ist noch nicht verfügbar komme bald wieder!</strong></p>
       </b-modal>
-
       <div class="pt-3 pb-3 yellow-blass-wait">
         <div class="pb-lg-5 container">
-
           <h1 class="pt-1 display-title-strong text-white">Entwicklung</h1>
           <p class="normal-text-secondary text-white">
-            Die App ist kurz vor der Veröffentlichung, sie benötigt schätzungsweise noch {{mathWorkState}}% für die Fertigstellung, sie wurde bereits zu circa {{work.workState}}% entwickelt.
+            Die App ist kurz vor der Veröffentlichung, sie benötigt schätzungsweise noch {{mathWorkState}}% für die
+            Fertigstellung, sie wurde bereits zu circa {{work.workState}}% entwickelt.
           </p>
-
           <b-progress :value="work.workState" :max="100" animated variant="dark"></b-progress>
-
         </div>
       </div>
     </div>
-
     <div class="pt-4">
       <b-img src="../assets/memoji1.png" class="img img-inv-only-handy"></b-img>
       <b-img src="../assets/memoji2.png" class="img"></b-img>
     </div>
-
     <div class="pb-4 pt-4 purple-black-wait">
-
       <h1 class="pt-1 display-title-strong text-white">Homy - Sicher und Privat</h1>
       <p class="normal-text-secondary text-white">
         Homy teilt keine Daten in Datenbanken. Sie bleiben einzig und alleine auf deinem Gerät gespeichert.
       </p>
-
       <b-img style="padding-right: 30px" src="../assets/iphone-1.png" class="img img-inv-only-handy"></b-img>
       <b-img style="padding-left: 30px" src="../assets/iphone-2.png" class="img img-inv-only-handy"></b-img>
-
     </div>
     <br class="no-move"/>
-
     <div class="pt-3 pb-3 orange-blass-wait">
-
       <h1 class="display-title-strong text-white">Transparent und eine einfache Bedienung</h1>
       <p class="normal-text-secondary text-white ">
         Wir versuchen den Homy Benutzern eine einfache und strukturierte Benutzeroberfläche zu schaffen.
       </p>
-
     </div>
-
     <div class="pt-4 container">
       <h1 class="display-title-strong text-dark">Newsletter</h1>
       <p class="normal-text-secondary text-dark">
         Behalte die neusten Informationen und den Entwicklungsstand der App immer im Auge.
       </p>
-
       <b-form @submit.prevent="sendEmail">
         <b-form-group
             id="input-group-1"
             label-for="input-1">
-
           <b-form-input
               id="input-1"
               v-model="text"
@@ -83,8 +65,6 @@
               required
           ></b-form-input>
         </b-form-group>
-
-
         <div>
           <div v-if="!sendEmail">
             <div v-if="error">
@@ -92,32 +72,28 @@
                 Ein Fehler ist aufgetaucht. Lade die Seite neu und probiere es erneut...
               </p>
             </div>
-
             <div v-else-if="waiting" style="text-align: center">
               <b-skeleton class="pt-2" animation="throb" width="85%"></b-skeleton>
               <b-skeleton animation="throb" width="55%"></b-skeleton>
               <b-skeleton animation="throb" width="70%"></b-skeleton>
             </div>
-
             <div v-else>
               <b-button type="submit" @click="onSubmit()" size="lg" variant="dark">Abonnieren</b-button>
             </div>
           </div>
-
           <div v-else-if="sendEmail">
             <p style="color: green">
               Du hast den Newsletter erfolgreich abbonniert!
             </p>
           </div>
         </div>
-
       </b-form>
     </div>
-
-
     <div class="pt-5" style="alignment: bottom">
       <p class="smaller-end-text">
-        Die  <a target="_blank" style="color: #6868b3" href="https://github.com/marvinhuelsmann/Homy">App</a> oder die  <a target="_blank" style="color: #6868b3" href="https://github.com/marvinhuelsmann/Homy-Landing-Page">Landing Page</a> auf GitHub
+        Die <a target="_blank" style="color: #6868b3" href="https://github.com/marvinhuelsmann/Homy">App</a> oder die <a
+          target="_blank" style="color: #6868b3" href="https://github.com/marvinhuelsmann/Homy-Landing-Page">Landing
+        Page</a> auf GitHub
         ansehen.
       </p>
       <p class="smaller-end-text">© {{ new Date().getFullYear() }}
@@ -128,7 +104,6 @@
         verbreiten :3
       </p>
     </div>
-
   </div>
 </template>
 
