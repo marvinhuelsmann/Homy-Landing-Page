@@ -27,10 +27,7 @@ import './plugins/bootstrap-vue'
 import App from './App.vue'
 import router from './router'
 
-
 library.add(faLock, faAngleDoubleDown, faEnvelope, faMapMarked, faSignature, faShare, faCommentAlt, faSave, faPhone, faCheck, faShoppingBag, faDownload, faQuestionCircle, faGamepad, faAddressBook, faAngleDoubleRight, faRocket)
-
-
 Vue.component('fai', FontAwesomeIcon)
 
 Vue.config.productionTip = false

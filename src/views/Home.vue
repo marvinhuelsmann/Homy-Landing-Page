@@ -126,7 +126,7 @@ export default {
     }
   },
   mounted() {
-    fetch('https://marv.link/workState').then(result => {
+    fetch('https://homy.fun/workState').then(result => {
       result.json().then(result => {
         this.work = result
       })

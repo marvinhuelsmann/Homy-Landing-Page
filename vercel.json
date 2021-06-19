@@ -2,10 +2,14 @@
   "functions": {
     "api/addNewsLetter.php": {
       "runtime": "vercel-php@0.4.0"
+    },
+    "api/getDevelopment.php": {
+      "runtime": "vercel-php@0.4.0"
     }
   },
   "routes": [
-    { "src": "/addMail",  "dest": "/api/addNewsLetter.php" }
+    { "src": "/addMail",  "dest": "/api/addNewsLetter.php" },
+    { "src": "/workState",  "dest": "/api/getDevelopment.php" }
   ]
 }
 
