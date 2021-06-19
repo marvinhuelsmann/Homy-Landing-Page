@@ -151,7 +151,7 @@ export default {
       }
       this.waiting = true;
 
-      fetch('https://marv.link/addMail?mail=' + this.text).then(response => {
+      fetch('https://homy.fun/addMail?mail=' + this.text).then(response => {
         response.json().then(() => {
           if (response.ok) {
             this.sendEmail = true
